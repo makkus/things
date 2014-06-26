@@ -4,8 +4,4 @@ things.connectors
 things.connectors.inMemory
 things.connectors.xstream
 things.exceptions
-things.model.types
-things.model.types.attributes
 things.thing
-things.types
-things.utils
