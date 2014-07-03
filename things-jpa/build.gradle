@@ -50,6 +50,7 @@ dependencies {
     compile project(":things-core")
     compile("org.springframework.boot:spring-boot-starter-data-jpa:" + springBootVersion)
     compile("com.h2database:h2:1.4.178")
+    compile('org.javassist:javassist:3.18.2-GA')
 
     testCompile("junit:junit")
 
