@@ -164,3 +164,7 @@ task uml(type: JavaExec) {
     args = plantUmlFiles
 }
 
+task getVersion << {
+  println version
+}
+
