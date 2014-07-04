@@ -17,12 +17,11 @@
  * License along with this library.
  */
 
-apply plugin: 'java'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-version = '0.1'
+//version = '0.1'
 
 
 dependencies {

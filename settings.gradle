@@ -17,6 +17,7 @@ include 'services:webservice'
 */
 
 rootProject.name = 'things'
+
 include 'things-common'
 include 'things-core'
 include 'things-test'
