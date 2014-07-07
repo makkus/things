@@ -52,7 +52,7 @@ public class AnnotationTypeFactory {
     private static Set<Class<?>> types;
 
     public static TypeRegistry createTypeRegistry() {
-        TypeRegistry tr = new TypeRegistry();
+        TypeRegistryImpl tr = new TypeRegistryImpl();
         for ( ThingType tt : getAllTypes() ) {
             tr.addType(tt);
         }

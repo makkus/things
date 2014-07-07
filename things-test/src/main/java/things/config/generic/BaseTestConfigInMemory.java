@@ -33,6 +33,7 @@ import things.thing.ThingWriter;
 import things.types.AnnotationTypeFactory;
 import things.types.ThingType;
 import things.types.TypeRegistry;
+import things.types.TypeRegistryImpl;
 
 import javax.inject.Inject;
 import javax.validation.Validation;
@@ -95,7 +96,7 @@ public class BaseTestConfigInMemory {
 
     @Bean
     public TypeRegistry typeRegistry() {
-        TypeRegistry tr = new TypeRegistry();
+        TypeRegistryImpl tr = new TypeRegistryImpl();
         for ( ThingType tt : AnnotationTypeFactory.getAllTypes() ) {
             tr.addType(tt);
         }

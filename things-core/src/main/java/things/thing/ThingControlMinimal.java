@@ -34,7 +34,7 @@ import things.config.ThingQueries;
 import things.config.ThingReaders;
 import things.config.ThingWriters;
 import things.exceptions.*;
-import things.types.TypeRegistry;
+import things.types.TypeRegistryImpl;
 import things.utils.MatcherUtils;
 
 import javax.inject.Inject;
@@ -71,7 +71,7 @@ public class ThingControlMinimal {
     protected ThingQueries thingQueries = new ThingQueries();
     protected ThingReaders thingReaders = new ThingReaders();
     protected ThingWriters thingWriters = new ThingWriters();
-    protected TypeRegistry typeRegistry = new TypeRegistry();
+    protected TypeRegistryImpl typeRegistry = new TypeRegistryImpl();
     protected Validator validator = null;
 
     public ThingControlMinimal() {
@@ -622,7 +622,7 @@ public class ThingControlMinimal {
     }
 
     @Inject
-    public void setTypeRegistry(TypeRegistry typeRegistry) {
+    public void setTypeRegistry(TypeRegistryImpl typeRegistry) {
         this.typeRegistry = typeRegistry;
     }
 

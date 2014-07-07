@@ -19,8 +19,6 @@
 
 package things.thing;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Ordering;
 import com.google.common.collect.Sets;
@@ -49,7 +47,7 @@ import java.util.Set;
  *
  * ##### thingType
  *
- * The type of a Thing is linked to the implementing class of the @see Value it wrappes. You can use a {@link things.types.TypeRegistry}
+ * The type of a Thing is linked to the implementing class of the @see Value it wrappes. You can use a {@link things.types.TypeRegistryImpl}
  * to convert between Type-strings, Type-classes and Value-types, there are also convenience methods to compare and inspect types. Further information in the {@link things.types.ThingType} javadoc.
  *
  * Types are needed for serializing and de-serializing values, both in a Thing-API and underlying storage engine.
@@ -234,7 +232,7 @@ public class Thing<V> implements Comparable<Thing>, java.io.Serializable {
     }
 
     /**
-     * Sets this Things' type. Make sure you set a valid type (for example, check the {@link things.types.TypeRegistry} that is used in your application.
+     * Sets this Things' type. Make sure you set a valid type (for example, check the {@link things.types.TypeRegistryImpl} that is used in your application.
      */
     public void setThingType(String type) {
         thingType = type;

@@ -19,16 +19,13 @@
 
 package things.thing;
 
-import com.codahale.metrics.MetricRegistry;
-import com.codahale.metrics.Timer;
-import com.google.common.collect.Maps;
 import rx.Observable;
 import things.exceptions.ThingRuntimeException;
-import things.types.TypeRegistry;
+import things.types.TypeRegistryImpl;
 import things.utils.MatcherUtils;
 
 import javax.inject.Inject;
-import java.util.Map;
+
 import static com.codahale.metrics.MetricRegistry.name;
 
 /**
@@ -40,7 +37,7 @@ import static com.codahale.metrics.MetricRegistry.name;
  */
 abstract public class AbstractThingReader implements ThingReader {
 
-    protected TypeRegistry typeRegistry = null;
+    protected TypeRegistryImpl typeRegistry = null;
 
     abstract public Observable<? extends Thing<?>> findThingForId(String id);
 
@@ -161,7 +158,7 @@ abstract public class AbstractThingReader implements ThingReader {
     }
 
     @Inject
-    public void setTypeRegistry(TypeRegistry typeRegistry) {
+    public void setTypeRegistry(TypeRegistryImpl typeRegistry) {
         this.typeRegistry = typeRegistry;
     }
 
