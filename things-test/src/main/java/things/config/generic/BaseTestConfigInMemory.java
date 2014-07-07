@@ -95,7 +95,7 @@ public class BaseTestConfigInMemory {
     }
 
     @Bean
-    public TypeRegistry typeRegistry() {
+    public TypeRegistryImpl typeRegistry() {
         TypeRegistryImpl tr = new TypeRegistryImpl();
         for ( ThingType tt : AnnotationTypeFactory.getAllTypes() ) {
             tr.addType(tt);
