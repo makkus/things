@@ -7,6 +7,7 @@ import java.util.Set;
  * Created by markus on 7/07/14.
  */
 public interface TypeRegistry {
+
     Boolean equals(Class typeClass, String thingType);
 
     Boolean equals(String thingType, Class typeClass);

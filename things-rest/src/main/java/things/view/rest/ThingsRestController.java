@@ -83,7 +83,7 @@ public class ThingsRestController {
     }
 
     @Transactional(readOnly = true)
-    @RequestMapping(value = "/{queryType}/for/{queryKey}/of/every/{type}/{key}")
+    @RequestMapping(value = "/{queryType}/{queryKey}/of/every/{type}/{key}")
     @Timed
     public List<Thing> getChildrenOfTypeForTypeAndKey(@PathVariable("type") String type, @PathVariable("key") String key, @PathVariable("queryType") String queryType, @PathVariable("queryKey") String queryKey) {
 
